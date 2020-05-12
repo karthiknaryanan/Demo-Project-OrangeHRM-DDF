@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [OrangeHRM Login Suite]" parallel="none">
+  <test name="Login Test With Correct Credentials(failed)" parallel="none">
+    <classes>
+      <class name="com.TestCases.CompletlyCorrectCredntials">
+        <methods>
+          <include name="loginWithCorrectCredentials"/>
+        </methods>
+      </class> <!-- com.TestCases.CompletlyCorrectCredntials -->
+      <class name="com.TestCases.OnlyCorrectUserName">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.TestCases.OnlyCorrectUserName -->
+    </classes>
+  </test> <!-- Login Test With Correct Credentials(failed) -->
+  <test name="Login Test With InCorrect Credentials(failed)" parallel="none">
+    <classes>
+      <class name="com.TestCases.CompletelyWrongCredentials">
+        <methods>
+          <include name="loginWithWrongCredentials"/>
+        </methods>
+      </class> <!-- com.TestCases.CompletelyWrongCredentials -->
+      <class name="com.TestCases.OnlyCorrectUserName">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.TestCases.OnlyCorrectUserName -->
+    </classes>
+  </test> <!-- Login Test With InCorrect Credentials(failed) -->
+  <test name="Login Test With InCorrect UserName(failed)" parallel="none">
+    <classes>
+      <class name="com.TestCases.OnlyCorrectPassword">
+        <methods>
+          <include name="loginWithOnlyCorrectPassword"/>
+        </methods>
+      </class> <!-- com.TestCases.OnlyCorrectPassword -->
+      <class name="com.TestCases.OnlyCorrectUserName">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.TestCases.OnlyCorrectUserName -->
+    </classes>
+  </test> <!-- Login Test With InCorrect UserName(failed) -->
+</suite> <!-- Failed suite [OrangeHRM Login Suite] -->

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OrangeHRM Login Suite" parallel ="tests" verbose="5">
+
+<tests>
+
+
+
+
+	<test name="Login Test With Correct Credentials">
+		<classes>
+			<class name="com.TestCases.CompletlyCorrectCredntials" />
+
+		</classes>
+	</test>
+	<test name="Login Test With InCorrect Credentials">
+		<classes>
+
+			<class name="com.TestCases.CompletelyWrongCredentials" />
+
+		</classes>
+	</test>
+	<test name="Login Test With InCorrect UserName">
+		<classes>
+
+			<class name="com.TestCases.OnlyCorrectPassword" />
+
+		</classes>
+	</test>
+	<test name="Login Test With InCorrect Password">
+		<classes>
+
+			<class name="com.TestCases.OnlyCorrectUserName" />
+		</classes>
+	</test>
+
+</tests>
+
+
+</suite> <!-- Suite -->

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parameterization Example Test Suite">
+
+	<test thread-count="5" name="Login Test">
+		<classes>
+			<class name="com.TestCases.Parameterization">
+			<methods >
+			<parameter name="username" value="Admin"></parameter>
+			<parameter name="password" value="admin"></parameter>
+			<include name="loginWithOnlyCorrectUserName"></include>
+			</methods>
+			<methods >
+			<parameter name="username" value="Edmin"></parameter>
+			<parameter name="password" value="admin123"></parameter>
+			<include name="loginWithOnlyCorrectPassword"></include>
+			</methods>
+			<methods >
+			<parameter name="username" value="Admin"></parameter>
+			<parameter name="password" value="admin123"></parameter>
+			<include name="loginWithCorrectCredentials"></include>
+			</methods>
+			<methods >
+			<parameter name="username" value="Edmin"></parameter>
+			<parameter name="password" value="admin"></parameter>
+			<include name="loginWithWrongCredentials"></include>
+			</methods>
+			</class>
+		</classes>
+
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
